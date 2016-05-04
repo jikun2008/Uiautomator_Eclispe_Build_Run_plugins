@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.3"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.runtime.IAdaptable"
+            nameFilter="*.java"
+            id="com.no.uiautomator.contribution">
+         <action
+         	   definitionId="runuiautomator"
+               label="Run As Uiautomator"
+               class="com.no.uiautomator.actions.BuildRunUiautomatorAction"
+               menubarPath="additions"
+               enablesFor="1"
+               icon="icons/Icon.jpg"
+               id="com.no.uiautomator.runuiautomator">
+         </action>
+             <action
+         	   definitionId="runuiautomator"
+               label="Setting Uiautomator"
+               class="com.no.uiautomator.actions.SettingAction"
+               menubarPath="additions"
+               enablesFor="1"
+               icon="icons/Icon.jpg"
+               id="com.no.uiautomator.SettingAction">
+         </action>
+      </objectContribution>
+   </extension>
+	<extension
+         point="org.eclipse.ui.commands">
+         <category
+            description="Open cmd window from project or file quickly"
+            id="org.slive.quickcmd.commands.category"
+            name="Quick"/>
+      <!-- Commands -->
+      <command
+      		categoryId="org.slive.quickcmd.commands.category"
+            id="runuiautomator"
+            name="Quick Cmd"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <!-- Keyassist -->
+      <key
+            commandId="runuiautomator"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Alt+C"/>
+   </extension>
+</plugin>
