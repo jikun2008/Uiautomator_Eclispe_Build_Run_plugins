@@ -77,7 +77,7 @@ public class ConsoleFactory implements IConsoleFactory {
 	 */
 	public static void printToConsole(String message) {
 		MessageConsoleStream printer = ConsoleFactory.getConsole().newMessageStream();
-		printer.setActivateOnWrite(true);
+		printer.setActivateOnWrite(false);
 
 		printer.println(message);
 	}

@@ -67,7 +67,7 @@ public class CmdCommandGenerator {
 		File file = new File(path);
 		String filename = file.getName();
 		String jarname = filename + ".jar";
-		String cmd = START_CMD + "adb shell uiautomator runtest " + jarname + " -c " + packageclassname;
+		String cmd = START_CMD + "adb shell uiautomator runtest " + jarname +" --nohup "+ " -c " + packageclassname;
 		System.out.println("cmd=" + cmd);
 		return cmd;
 	}
