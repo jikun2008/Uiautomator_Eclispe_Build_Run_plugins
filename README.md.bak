@@ -1,0 +1,2 @@
+# Uiautomator_Eclispe_Build_Run_plugins
+Uiautomator的Eclipse插件可以编译，运行。

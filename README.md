@@ -51,7 +51,7 @@ D:\devtools\android-sdk-windows\tools
 ![android](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/Android_android%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.png?raw=true)
 
 
-####配置Ant 环境变量
+#### 配置Ant 环境变量
 请先下载Ant
 
 例如
@@ -132,3 +132,66 @@ D:\tools\apache-ant-1.9.5\bin
 
 
 好了这个时候我们就可以编写代码了
+
+### 编写Uiautomator代码
+
+
+我们新建一个类叫类名叫Test，包名叫com.test.uiautomator。如下图
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E6%96%B0%E5%BB%BA%E7%B1%BB.png?raw=true)
+
+#### 设置Uiautomator 的Id(这个不用每次都设置，只要设置一次就可以了，刚刚我们选择的是android-23,)
+
+打开CMD.exe 输入android list 可以看到有很多ID如下图
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/Android%20list.png?raw=true)
+
+然后找到刚才我们选择的android-23的地方看下这个它的ID是多少
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E6%9F%A5%E7%9C%8B%E4%BD%A0%E9%80%89%E6%8B%A9%E7%9A%84ID.png?raw=true)
+
+如上图我的android-23 的 id 是 11（请注意每个人的id可能一样，请一定要注意这个问题）
+
+
+右键点击Test.java类，然后点击Setting Uiautomator
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E9%85%8D%E7%BD%AEUiautomator%E7%9A%84Id.png?raw=true)
+
+然后在弹出的对话框中输入11 点击确定
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E5%BC%B9%E5%87%BA%E6%A1%86%E8%AE%BE%E7%BD%AEID.png?raw=true)
+
+然后我们编写Test的代码如下
+```java
+package com.test.uiautomator;
+
+import com.android.uiautomator.core.UiObject;
+import com.android.uiautomator.core.UiObjectNotFoundException;
+import com.android.uiautomator.core.UiSelector;
+import com.android.uiautomator.testrunner.UiAutomatorTestCase;
+
+public class Test extends UiAutomatorTestCase {
+
+	public void testclick() {
+		UiObject uiObject = new UiObject(new UiSelector().text("FirstButton"));
+		for (int i = 0; i < 100; i++) {
+			try {
+				uiObject.click();
+			} catch (UiObjectNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+```
+然后安装测试的APK   Uiautomator.apk
+
+用USB连接你的手机，
+然后右键点击Test.java
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C.png?raw=true)
+
+github目录介绍
+
+![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D.png?raw=true)
