@@ -195,3 +195,8 @@ public class Test extends UiAutomatorTestCase {
 github目录介绍
 
 ![junit](https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins/blob/master/image/%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D.png?raw=true)
+
+
+github目录：https://github.com/jikun2008/Uiautomator_Eclispe_Build_Run_plugins
+
+我觉得我写的这篇文章配置Uiautomator的Eclipse编译插件过于复杂，我想以后更新一个视频来教大家使用这个插件
