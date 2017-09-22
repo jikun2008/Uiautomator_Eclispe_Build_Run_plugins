@@ -1,3 +1,8 @@
+
+#   @Deprecated
+# 现在编译Uiautomator可以使用androidStudio 我这个Eclipse插件的方式跟AndroidStudio比已经没有任何优势了。
+
+
 # Uiautomator_Eclispe_Build_Run_plugins 插件安装和配置指南
 > *  Uiautomator自动化框架的缺点是编译和运行起来非常麻烦，需要手动执行CMD指令
 > * 这个插件主要是为了解决Uiautomator框架编译和运行
