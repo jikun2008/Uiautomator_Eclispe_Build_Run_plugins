@@ -1,6 +1,7 @@
 
 #   @Deprecated
-# 现在编译Uiautomator可以使用androidStudio 我这个Eclipse插件的方式跟AndroidStudio比已经没有任何优势了。
+> *现在编译Uiautomator可以使用androidStudio 
+> *我这个Eclipse插件的方式跟AndroidStudio比已经没有任何优势了。
 
 
 # Uiautomator_Eclispe_Build_Run_plugins 插件安装和配置指南
